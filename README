@@ -3,3 +3,16 @@ Deben desgargar el proyecto y una ves que descarguen hagan lo siguiente.
 
 Esta aplicación funciona con Rails 2.2.2 osea la versión oficial del Rails 2.2
 
+Para que pueda funcionar solo inicien el servidor rails
+./script/server
+Dirijanse a la página http://localhost:3000
+
+y si desean ver como funciona con el admin solo vayan a
+
+http://localhost:3000/login
+
+login: demo
+password: demo123
+
+
+
