@@ -337,7 +337,7 @@ Ext.extend(Rails.Page, Rails.Tree, {
           node.remove();
           this.currentNode = newNode;
           this.form.form.setValues({'page[id]': r.id});
-          this.form.url = this.editPageUrl;
+          this.form.url = this.updatePageUrl;
         }else {
           var cls = node.attributes.iconCls;
           var u = node.getUI().getIconEl();

@@ -1,4 +1,0 @@
-Direccion Modem (Router) 200.105.201.77
-
-OpenDNS 208.67.222.222
-	208.67.222.222

@@ -52,21 +52,20 @@ ul#menu li a:hover,ul#menu li a.selected{
     background:#C9D8F3;
 }
 
-#cont div{
-    padding:5px 38px;
+#cont{
+    padding: 0px;
+    margin-top: 4px;
 }
-#cont.der div{
-    width:400px;
-    float:left;
-    padding:5px 10px 5px 38px;
+
+#cont div.iz{
+    padding: 0 5px 10px 40px;
+    float: left;
+    width: 400px;
 }
-#der{
-    float:left;
-    width:175px;
-    padding:5px;
-    margin:20px 7px;
-    border:3px #B6B6B6 solid;
-    background:#E7E7E7;
+#cont div.der{
+    width: 175px;
+    float: left;
+    padding: 10px 25px;
 }
 #pie{
     /*background-image: url('../images/frontend/pie.gif');
