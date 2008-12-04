@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Admin Enano</title>
+  <%= stylesheet_link_tag "../ext/resources/css/ext-all.css", "extra.css", "Ext.ux.UploadDialog.css" %>
+  <%= javascript_include_tag "../ext/adapter/ext/ext-base.js" %>
+  <%= javascript_include_tag "../ext/ext-all-debug.js"%>
+  <script type="text/javascript">
+  Ext.BLANK_IMAGE_URL = "../ext/resources/images/default/s.gif";
+  Ext.namespace('Rails');
+  </script>
+  <%= javascript_include_tag "../ext/rails/railsForm.js", "../ext/rails/railsTree.js" %>
+  <%= javascript_include_tag "../tiny_mce/tiny_mce_src.js", "../ext/plugins/Ext.ux.form.TinyMCE.js"%>
+  <%= javascript_include_tag "../ext/rails/railsPage.js", "../ext/rails/railsViewport.js"%>
+  <%= javascript_include_tag "../ext/plugins/Ext.ux.UploadDialog.js", "../ext/rails/railsBrowser.js"%>
+</head>
+<body>
+  <div id="category-tree" ></div>
+<%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
+<script type="text/javascript">
+ROOT_FILES = "<%= "#{RAILS_ROOT}/public/files" %>";
+ROOT_THUMBS = "<%= "#{RAILS_ROOT}/public/thumbs"  %>";
+<% reg = /#{RAILS_ROOT}\/public\//.to_s %>
+ROOT_PUBLIC_REGEX = new RegExp(/^<%= reg.slice( 7, (reg.length - 8) ) %>/);
+//Presents an error message window
+Ext.Ajax.on('requestexception', function(conn, resp, opt) {
+  error = new Ext.Window({ title: 'Error', html: resp.responseText, width:640, height: 480, autoScroll: true});
+  error.show();
+});
+
+Ext.form.Field.prototype.msgTarget = 'side';
+
+Ext.onReady(function() {
+  Ext.QuickTips.init();  
+
+  Rails.PAGE_TYPES = <%= @page_type.to_json %>;
+
+  cv = new Rails.Viewport({
+    addPageUrl : '/pages/create',
+    editPageUrl : '/pages/update',
+    deletePageUrl : '/pages/destroy',
+    jsonTree : <%= @pages.to_json %>
+  });
+});
+tinyMCEModalWin = null;
+function myImageBrowser(fieldname, url, type, win) {
+
+  tinyMCEModalWin = win;
+  var v = Ext.getCmp('mainPanel')
+  v.showBrowser();
+  //Gets tinyMCE elements and sets a new style z-index
+  document.getElementById(win.tinyMCEPopup.id).style.zIndex = v.browser.el.dom.style.zIndex - 50;
+  document.getElementById('mceModalBlocker').style.zIndex = v.browser.el.dom.style.zIndex - 100;
+  v.browser.view.toggleSelect(true);
+}
+
+function enanoSelectFile(file) {
+  var input = tinyMCEModalWin.document.getElementById('src');
+  var url = file.replace(ROOT_PUBLIC_REGEX, '');
+  input.value = url;
+  tinyMCEModalWin.ImageDialog.showPreviewImage(url);
+}
+</script>
+<div id="north">
+</div>
+<div id="welcome-div" style="padding: 10px">
+  Bienvenido a Enano un pequeño sistema de administración de Contenidos
+
+ </div>
+
+
+</body>
+</html>

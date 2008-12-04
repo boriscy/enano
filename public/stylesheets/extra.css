@@ -1,0 +1,219 @@
+/*Imagenes*/
+.rails-add {background-image:url(../images/icons/add.png) !important;}
+.rails-edit {background-image:url(../images/icons/page_edit.png) !important;}
+.rails-del {background-image:url(../images/icons/delete.png) !important;}
+.rails-upload {background-image:url(../images/icons/up.png) !important;}
+.rails-up{background-image:url(../images/icons/arrow_up.png) !important;}
+.rails-back{background-image:url(../images/icons/arrow_left.png) !important;}
+.rails-forward{background-image:url(../images/icons/arrow_right.png) !important;}
+.rails-download {background-image:url(../images/icons/down.png) !important;}
+.rails-refresh {background-image:url(../images/icons/arrow_refresh_small.png) !important;}
+.rails-logout {background-image:url(../images/icons/logout.png) !important;}
+.rails-user {background-image:url(../images/icons/user.png) !important;}
+.archivaldo {background-image:url(../images/icons/archivaldo.png) !important;}
+.rails-group {background-image:url(../images/icons/package.png) !important;}
+.rails-app {background-image:url(../images/icons/application_form.png) !important;}
+.rails-conf {background-image:url(../images/icons/cog.png) !important;}
+.rails-home {background-image:url(../images/icons/application_home.png) !important;}
+.rails-key {background-image:url(../images/icons/key.png) !important;}
+.rails-save, .rails-disk {background-image:url(../images/icons/disk.png) !important;}
+.rails-expand {background-image:url(../images/icons/arrow_out.png) !important;}
+.rails-collapse {background-image:url(../images/icons/arrow_in.png) !important;}
+.rails-root {background-image:url(../images/icons/chart_organisation.png) !important;}
+.rails-preview {background-image:url(../images/icons/page_white_magnify.png) !important;}
+.rails-page-white {background-image:url(../images/icons/page_white_horizontal.png) !important;}
+.rails-page-link {background-image:url(../images/icons/page_white_link.png) !important;}
+.rails-cut {background-image:url(../images/icons/cut.png) !important;}
+.rails-copy {background-image:url(../images/icons/page_copy.png) !important;}
+.rails-paste {background-image:url(../images/icons/page_paste.png) !important;}
+.rails-refresh {background-image:url(../images/icons/arrow_refresh.png) !important;}
+.rails-dir, rails-foler{background-image:url(../images/icons/folder.gif) !important;}
+.rails-delete{background-image:url(../images/icons/delete.png) !important;}
+.rails-select{background-image:url(../images/icons/accept.png) !important;}
+/*Etiquetas (Tags)*/
+.rails-blank-box {width:16px !important; height:16px !important;}
+
+/*Estilos no relacionados con imagenes*/
+.negro{color:#000 !important}
+.rojo{color:#FF0000 !important}
+.bold{font-weight:bold !important}
+.center{text-align:center !important}
+.fl{float:left !important}
+
+/***********************************************
+*Espacio CSS de plugins para Ext
+*/
+
+/*iconcombo*/
+.ux-icon-combo-icon {
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	width: 18px;
+	height: 14px;
+}
+.ux-icon-combo-input {
+	padding-left: 25px;
+}
+.x-form-field-wrap .ux-icon-combo-icon {
+	top: 3px;
+	left: 5px;
+}
+.ux-icon-combo-item {
+	background-repeat: no-repeat ! important;
+	background-position: 3px 50% ! important;
+	padding-left: 24px ! important;
+}
+
+
+/*grid.RowActions*/
+.ux-row-action-cell .x-grid3-cell-inner {
+	padding:1px 0 0 0;
+}
+.ux-row-action-item {
+	float:left;
+	min-width:16px;
+	height:16px;
+	background-repeat:no-repeat;
+	margin: 0 5px 0 0;
+	cursor:pointer;
+	overflow:hidden;
+}
+.ext-ie .ux-row-action-item {
+	width:16px;
+}
+.ext-ie .ux-row-action-text {
+	width:auto;
+}
+.ux-row-action-item span {
+	vertical-align:middle;
+	padding:0 0 0 20px;
+	line-height:18px;
+}
+.ext-ie .ux-row-action-item span {
+	width:auto;
+}
+
+/* styles for groups */
+.x-grid-group-hd div {
+	position:relative;
+	height:16px;
+}
+.ux-grow-action-item {
+	min-width:16px;
+	height:16px;
+	background-repeat:no-repeat;
+	background-position: 0 50% ! important;
+	margin: 0 0 0 4px;
+	padding: 0 ! important;
+	cursor:pointer;
+	float:left;
+}
+.ext-ie .ux-grow-action-item {
+	width:16px;
+}
+.ux-action-right {
+	float:right;
+	margin: 0 3px 0 2px;
+	padding: 0 ! important;
+}
+.ux-grow-action-text {
+	padding: 0 ! important;
+	margin:0 ! important;
+	background:transparent none ! important;
+	float:left;
+}
+
+/*Mensajes*/
+.msg .x-box-mc {
+    font-size:14px;
+}
+#msg-div {
+    position:absolute;
+    left:35%;
+    top:10px;
+    width:250px;
+    z-index:20000;
+}
+
+/*xcheckbox*/
+.xcheckbox-wrap {
+  line-height: 18px;
+  padding-top:2px;
+}
+.xcheckbox-wrap a {
+  display:block;
+  width:16px;
+  height:16px;
+  float:left;
+}
+.x-toolbar .xcheckbox-wrap {
+  padding: 0 0 2px 0;
+}
+.xcheckbox-on {
+  background:transparent url(../ext/resources/images/default/menu/checked.gif) no-repeat 0 0;
+}
+.xcheckbox-off {
+  background:transparent url(../ext/resources/images/default/menu/unchecked.gif) no-repeat 0 0;
+}
+.xcheckbox-disabled {
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor:default;
+}
+
+/**
+*Para imagenes el ViewPort
+*/
+.thumb-wrap{
+  float: left;
+  text-align: center;
+  width: 130px;
+  height: 140px;
+  margin: 4px;
+}
+.thumb{
+  width: 128px;
+  height: 128px;
+  margin: auto;
+}
+.thumb-wrap .text{
+  overflow: hidden;
+  padding: 0px 2px 0px 2px;
+}
+.x-view-selected{
+	background:#8db2e3;
+}
+
+
+
+
+/***
+*Image Button
+*/
+.ux-img-but{
+  border: 1px solid #AFAFAF;
+  cursor: pointer;
+  float: left;
+  margin: 1px;
+  position: relative;
+}
+.ux-img-but .cont{
+  padding: 2px;
+}
+.ux-img-but .over{
+  background: #FFF;
+  opacity: 0.35;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.ux-img-but .over:hover{
+  background: none;
+}
+.ux-img-but img{
+  float: left;
+}
+.ux-img-but .text{
+  float: left;
+}

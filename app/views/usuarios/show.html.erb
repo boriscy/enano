@@ -1,0 +1,6 @@
+<div id="usuarios-form"></div>
+<%= render :partial => 'form_items', :object => :usuarios_form_items %>
+<%= ext_form_for 'Usuarios',
+                 :element => 'usuarios-form',
+                 :form_items => :usuarios_form_items,
+                 :mode => :show %>

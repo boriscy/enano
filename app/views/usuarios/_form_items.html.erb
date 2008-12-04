@@ -1,0 +1,7 @@
+<% javascript_tag do -%>
+  var <%= "#{form_items}" %> = [
+    <%= ext_field(:field_label => 'Nombres', :name => 'usuarios[nombres]', :xtype => :text_field) %>,
+    <%= ext_field(:field_label => 'Fecha', :name => 'usuarios[fecha]', :xtype => :date_select) %>,
+    <%= ext_field(:field_label => 'Apellido', :name => 'usuarios[apellido]', :xtype => :text_field) %>
+  ];
+<% end -%>

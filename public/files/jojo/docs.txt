@@ -1,0 +1,10 @@
+- Intro
+Mostrar la importación y exportación de productos de Bolivia y Belgica
+
+
+1.- Crear cada página con una personalización con respecto a cada producto
+2.- Bienvenido a Belgandin a (Presetnacion de la sociedad)
+3.- En la página de inicio se debe cambiar el collage de fotos automaticamente
+4.- el Lado izquierdo con Noticias debe presentar noticias generales de cualquier tipo
+5.- Cambio de Idiomas.
+6.- La página por producto debe tener noticias relacionadas al producto

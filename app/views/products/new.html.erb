@@ -1,0 +1,6 @@
+<div id="product-form"></div>
+<%= render :partial => 'form_items', :object => :product_form_items %>
+<%= ext_form_for 'Product',
+                 :element => 'product-form',
+                 :form_items => :product_form_items,
+                 :mode => :new %>

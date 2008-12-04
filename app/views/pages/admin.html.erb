@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Admin Enano</title>
+  <%= stylesheet_link_tag "../ext/resources/css/ext-all.css", "extra.css" %>
+  <%= javascript_include_tag "../ext/adapter/ext/ext-base.js" %>
+  <%= javascript_include_tag "../ext/ext-all-debug.js"%>
+  <script type="text/javascript">
+  Ext.BLANK_IMAGE_URL = "../ext/resources/images/default/s.gif";
+  Ext.namespace('Rails');
+  </script>
+  <%= javascript_include_tag "../ext/rails/railsForm.js", "../ext/rails/railsTree.js" %>
+  <%= javascript_include_tag "../tiny_mce/tiny_mce_src.js", "../ext/plugins/Ext.ux.form.TinyMCE.js"%>
+  <script type="text/javascript">
+  Rails.Page = function(config) {
+    config = config || {};
+    
+    Rails.Page.superclass.constructor.call(this, {
+
+      width : 250,
+      jsonTree : config.jsonTree || [],
+      menuItems : [
+        { text : 'Crear', tooltip : 'Crear Página'},
+        { text : 'Editar', tooltip : 'Editar Página'},
+        { text : 'Borrar', tooltip : 'Borrar Página'}
+      ]
+    });
+
+    Ext.apply(this, config);
+  }
+
+  Ext.extend(Rails.Page, Rails.Tree, {
+    region: 'west',
+    animate: false,
+    split: true,
+    collapsible: true,
+    collapseMode: 'mini'
+  });
+  </script>
+  <%= javascript_include_tag "../ext/rails/railsViewport.js" %>
+</head>
+<body>
+  <div id="category-tree" ></div>
+<%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
+<script type="text/javascript">
+
+
+Ext.reg('railspage', Rails.Page);
+//Presents an error message window
+Ext.Ajax.on('requestexception', function(conn, resp, opt) {
+  error = new Ext.Window({ title: 'Error', html: resp.responseText, width:640, height: 480, autoScroll: true});
+  error.show();
+});
+
+Ext.onReady(function() {
+
+  Rails.PAGE_TYPES = <%= @page_type.to_json %>;
+
+  cv = new Rails.Viewport({
+    addPageUrl : '/pages/create',
+    editPageUrl : '/pages/update',
+    deletePageUrl : '/pages/destroy',
+    jsonTree : <%= @pages.to_json %>
+  });
+
+});
+</script>
+<div id="north" class="x-panel-header" style="height:100%; vertical-align:middle !important;">
+  <h2 style="margin: auto 10px !important">UPS Editorial</h2>
+</div>
+<div id="welcome-div" style="padding: 10px">
+  Bienvenido a Enano un pequeño sistema de administración de Contenidos
+
+ </div>
+
+
+</body>
+</html>

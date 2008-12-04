@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>UPS Editorial</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<meta http-equiv="content-language" content="es">
+<meta name="author" content="Boris Barroso">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="revisit-after" content="15 days"><title>Editorial UPS : Home</title>
+
+<%= stylesheet_link_tag 'style.css', 'content.css' %>
+</head>
+<body>
+
+    <div id="wrap">
+      <div id="wrap2">
+        <div id="enc">
+        </div>
+        <!--Menu-->
+        <ul id="menu">
+          <%= menu @pages %>
+        </ul>
+        <div id="cont" class="der">
+          <div>
+            <%= yield %>
+          </div>
+        </div>
+        <!--Contenido de la derecha-->
+        <div id="der">
+
+            <h4><a href="#">Código Penal</a></h4>
+            <a href="#"><img src="/images/frontend/penal.jpg" alt="Código Penal" class="fl"/></a>
+            <p>Nuevo código penal con las últimas leyes</p>
+            <div style="clear:both"></div>
+
+            <h4><a href="#">Constitución Política del Estado</a></h4>
+            <a href="#"><img src="/images/frontend/CPE.jpg" alt="CPE" class="fl"/></a>
+            <p>Nuevo Constitución política del estado con la nueva constituyente</p>
+        </div>
+      <div style="clear:both"></div>
+      <div id="pie"></div>
+    </div>
+  </div>
+</body>
+</html>

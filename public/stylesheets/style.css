@@ -1,0 +1,78 @@
+body{
+    margin:0px;
+    padding:0px;
+    background-color: #A17840;
+    background:#A17840 url('../images/frontend/fondoPrin.jpg') no-repeat;
+    /*background:#A17840 url('../images/frontend/fondoBody.gif') repeat-y;
+    background-position:103px 0px;*/
+}
+#wrap{
+    /*left:103px;*/
+    top:36px;
+    position: relative;
+    width:774px;
+    background:transparent url('../images/frontend/fondoBody.gif') repeat-y 103px 0px;
+    z-index: 15;
+}
+#wrap2{
+  width:671px;
+  left:103px;
+  background:transparent url('../images/frontend/fondoPrin.jpg') no-repeat -103px -36px;
+  position: relative;
+  z-index: 20;
+}
+/*Encabezado*/
+#enc{
+    background-image:url(../images/frontend/encabezado.jpg);
+    height:216px;
+}
+/*Menu*/
+ul#menu{
+    width:634px;
+    height:34px;
+    background:#92A0BA;
+    margin:0px 19px;
+    padding:0px;
+}
+ul#menu li{
+    margin:0px;
+    padding:0px;
+    display:inline;
+    list-style:none;
+}
+ul#menu li a{
+    padding:6px 10px 7px;
+    float:left;
+    color:#AF0000;
+    font-size:18px;
+    display:block;
+    text-decoration:none;
+}
+ul#menu li a:hover,ul#menu li a.selected{
+    background:#C9D8F3;
+}
+
+#cont div{
+    padding:5px 38px;
+}
+#cont.der div{
+    width:400px;
+    float:left;
+    padding:5px 10px 5px 38px;
+}
+#der{
+    float:left;
+    width:175px;
+    padding:5px;
+    margin:20px 7px;
+    border:3px #B6B6B6 solid;
+    background:#E7E7E7;
+}
+#pie{
+    /*background-image: url('../images/frontend/pie.gif');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;*/
+    background:#A17840 url('../images/frontend/pie.gif') no-repeat 0px 0px;
+    height:123px;
+    border: none;
+}

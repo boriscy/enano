@@ -1,0 +1,12 @@
+<div id="product-grid"></div>
+<%= ext_datastore_for 'Product' %>
+<% javascript_tag do -%>
+  var product_column_model = new Ext.grid.ColumnModel([
+    {id: 'id', header: "#", width: 20, dataIndex: 'id'},
+    {header: 'Title', dataIndex: 'product[title]'},
+    {header: 'Law number', dataIndex: 'product[law_number]'},
+    {header: 'Lead', dataIndex: 'product[lead]'},
+    {header: 'Body', dataIndex: 'product[body]'}
+  ]);
+<% end -%>
+<%= ext_grid_for 'Product', :element => 'product-grid' %>
