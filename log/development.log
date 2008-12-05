@@ -1,1 +1,115 @@
 
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-12-04 17:45:07) [GET]
+Rendering sessions/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2008-12-04 17:45:13) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"cb9569c0f0f94a7824f71d094d6dbf0f50cf4c7a", "login"=>"demo", "password"=>"demo123"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'demo') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to /admin
+Completed in 34ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-12-04 17:45:13) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mPageType Load (0.9ms)[0m   [0mSELECT page_types.id, page_types.text FROM "page_types" [0m
+  [4;36;1mPage Load (2.3ms)[0m   [0;1mSELECT * FROM "pages" ORDER BY lft ASC[0m
+  [4;35;1mPageType Load (0.6ms)[0m   [0mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;36;1mPage Load (0.9ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."id" = 6) [0m
+  [4;35;1mPageType Load (0.8ms)[0m   [0mSELECT * FROM "page_types" WHERE ("page_types"."id" = 2) [0m
+Rendering admin/index
+Completed in 90ms (View: 18, DB: 7) | 200 OK [http://localhost/admin]
+
+
+Processing PagesController#edit (for 127.0.0.1 at 2008-12-04 17:45:20) [GET]
+  Parameters: {"id"=>"1", "_dc"=>"1228427120520"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mPage Load (1.6ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."publish" = 't' AND "pages"."parent_id" IS NULL) ORDER BY lft ASC[0m
+  [4;35;1mPage Load (0.9ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."id" = 1) [0m
+Completed in 88ms (View: 49, DB: 4) | 200 OK [http://localhost/pages/edit/?_dc=1228427120520&id=1]
+
+
+Processing EnanoFilesController#browse (for 127.0.0.1 at 2008-12-04 17:45:23) [GET]
+  Parameters: {"node"=>"", "root"=>"files", "_dc"=>"1228427123795"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 89ms (View: 2, DB: 1) | 200 OK [http://localhost/enano_files/browse?_dc=1228427123795&node=&root=files]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2008-12-04 18:33:47) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '') LIMIT 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /login
+Completed in 69ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-12-04 18:33:47) [GET]
+Rendering sessions/new
+Completed in 25ms (View: 20, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-12-05 08:54:53) [GET]
+  [4;36;1mPage Load (39.9ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."parent_id" IS NULL AND "pages"."publish" = 't') ORDER BY lft ASC[0m
+  [4;35;1mPage Load (1.2ms)[0m   [0mSELECT * FROM "pages" ORDER BY lft ASC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 344ms (View: 178, DB: 41) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-12-05 08:55:02) [GET]
+Rendering sessions/new
+Completed in 56ms (View: 51, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-05 08:55:08) [GET]
+Rendering users/new
+Completed in 109ms (View: 39, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-12-05 09:00:53) [GET]
+Rendering sessions/new
+Completed in 28ms (View: 21, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2008-12-05 09:01:02) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"4f7ecef98579ecc83376b13af2593d70cf7ddcbb", "login"=>"demo", "password"=>"demo123"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'demo') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to /admin
+Completed in 74ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-12-05 09:01:02) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mPageType Load (0.7ms)[0m   [0mSELECT page_types.id, page_types.text FROM "page_types" [0m
+  [4;36;1mPage Load (8.8ms)[0m   [0;1mSELECT * FROM "pages" ORDER BY lft ASC[0m
+  [4;35;1mPageType Load (0.6ms)[0m   [0mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;36;1mPage Load (0.9ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."id" = 6) [0m
+  [4;35;1mPageType Load (0.6ms)[0m   [0mSELECT * FROM "page_types" WHERE ("page_types"."id" = 2) [0m
+Rendering admin/index
+Completed in 137ms (View: 21, DB: 13) | 200 OK [http://localhost/admin]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2008-12-05 09:01:06) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '') LIMIT 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /login
+Completed in 173ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-12-05 09:01:07) [GET]
+Rendering sessions/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
