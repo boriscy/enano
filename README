@@ -5,14 +5,25 @@ Just download and run the project
 to login go to http://localhost:3000/login.
 login: demo, password: demo123
 
-in case that you run MySQL as your database, run the migrations start the server
-and run this SQL
+in case that you run MySQL as your database create your database 
+modify the config/database.yml
+development:
+  adapter: mysql
+  encoding: utf8
+  database: enano
+  pool: 5
+  username: login
+  password: pass
+
+run the migrations start the server and run this SQL
 INSERT INTO `page_types` (`id`, `text`, `icon_cls`, `created_at`, `updated_at`) VALUES
 (1, 'Page', 'rails-page-white', '2008-09-19 20:43:01', '2008-10-02 21:04:38'),
 (2, 'Menu Link', 'rails-page-link', '2008-09-19 20:43:54', '2008-09-19 20:43:54');
 then go to http://localhost:3000/signup to create a User
 then go to http://localhost:3000/login
 
+Post (english):
+http://extjs.com/forum/showthread.php?t=54461
 ----------------------------------------------------------
 Español
 Saludos a todos y bienvenidos a Enano un proyecto muy interesanta,
@@ -32,7 +43,16 @@ login: demo
 password: demo123
 
 
-En caso de que quieran usar MySQL ejecuten las migraciones y corran el siguiente
+En caso de que quieran usar MySQL modifiquen el config/database.yml 
+development:
+  adapter: mysql
+  encoding: utf8
+  database: enano
+  pool: 5
+  username: login
+  password: pass
+
+creen la la base de datos ejecuten las migraciones y corran el siguiente
 SQL:
 INSERT INTO `page_types` (`id`, `text`, `icon_cls`, `created_at`, `updated_at`) VALUES
 (1, 'Page', 'rails-page-white', '2008-09-19 20:43:01', '2008-10-02 21:04:38'),
@@ -43,8 +63,6 @@ http://localhost:3000/signup
 creen un usuario y despues vayan a
 http://localhost:3000/login
 
-Post (english):
-http://extjs.com/forum/showthread.php?t=54461
 
 Post (español):
 http://softwarelibre.org.bo/borisb/weblog/3566.html
