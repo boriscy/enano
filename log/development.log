@@ -59,3 +59,5 @@ Processing PagesController#edit (for 127.0.0.1 at 2008-12-05 10:35:50) [GET]
   [4;35;1mPage Load (1.8ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."publish" = 't' AND "pages"."parent_id" IS NULL) ORDER BY lft ASC[0m
   [4;36;1mPage Load (0.9ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."id" = 1) [0m
 Completed in 51ms (View: 5, DB: 4) | 200 OK [http://localhost/pages/edit/?_dc=1228487750626&id=1]
+  [4;36;1mPageType Load (3.0ms)[0m   [0;1mSELECT * FROM "page_types" [0m
+  [4;36;1mPageType Load (1.6ms)[0m   [0;1mSELECT * FROM "page_types" [0m

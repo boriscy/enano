@@ -6,6 +6,8 @@ class CreatePageTypes < ActiveRecord::Migration
 
       t.timestamps
     end
+    PageType.create :text => 'Página', :icon_cls => 'rails-page-white'
+    PageType.create :text => 'Vinculo', :icon_cls => 'rails-page-link'
   end
 
   def self.down
