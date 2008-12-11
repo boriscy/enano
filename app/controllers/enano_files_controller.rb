@@ -2,7 +2,7 @@ require "ftools"
 class EnanoFilesController < ApplicationController
   before_filter :init, :check_method
 
-  #Action to browse files
+  # Action to browse files
   def browse
     b = params[:browse] || 'all'
     
@@ -11,7 +11,7 @@ class EnanoFilesController < ApplicationController
     else
       ret = @file.browse
     end
-    #Return for Tree or for view
+    # Return for Tree or for view
     if params[:root] && b == 'all'
       ret = {:success => true, params[:root] => ret[:files], :dir => ret[:dir]}
     elsif b == 'dir'

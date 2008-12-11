@@ -1,1 +1,61 @@
 
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-12-05 10:31:21) [GET]
+Rendering sessions/new
+Completed in 66ms (View: 62, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2008-12-05 10:31:27) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"343904940d787fa7520490da5e6afa7f49154474", "login"=>"demo", "password"=>"demo123"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'demo') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to /admin
+Completed in 116ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-12-05 10:31:27) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '') LIMIT 1[0m
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mPageType Load (1.3ms)[0m   [0mSELECT page_types.id, page_types.text FROM "page_types" [0m
+  [4;36;1mPage Load (5.2ms)[0m   [0;1mSELECT * FROM "pages" ORDER BY lft ASC[0m
+  [4;35;1mPageType Load (0.9ms)[0m   [0mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;36;1mPage Load (0.9ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."id" = 6) [0m
+  [4;35;1mPageType Load (0.6ms)[0m   [0mSELECT * FROM "page_types" WHERE ("page_types"."id" = 2) [0m
+Rendering admin/index
+Completed in 774ms (View: 462, DB: 11) | 200 OK [http://localhost/admin]
+
+
+Processing PagesController#edit (for 127.0.0.1 at 2008-12-05 10:31:40) [GET]
+  Parameters: {"id"=>"1", "_dc"=>"1228487500752"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mPage Load (1.9ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."publish" = 't' AND "pages"."parent_id" IS NULL) ORDER BY lft ASC[0m
+  [4;35;1mPage Load (0.9ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."id" = 1) [0m
+Completed in 544ms (View: 499, DB: 4) | 200 OK [http://localhost/pages/edit/?_dc=1228487500752&id=1]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-12-05 10:35:45) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mPageType Load (0.7ms)[0m   [0;1mSELECT page_types.id, page_types.text FROM "page_types" [0m
+  [4;35;1mPage Load (2.3ms)[0m   [0mSELECT * FROM "pages" ORDER BY lft ASC[0m
+  [4;36;1mPageType Load (0.8ms)[0m   [0;1mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "page_types" WHERE ("page_types"."id" = 1) [0m
+  [4;35;1mPage Load (1.0ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."id" = 6) [0m
+  [4;36;1mPageType Load (0.8ms)[0m   [0;1mSELECT * FROM "page_types" WHERE ("page_types"."id" = 2) [0m
+Rendering admin/index
+Completed in 125ms (View: 14, DB: 7) | 200 OK [http://localhost/admin]
+
+
+Processing PagesController#edit (for 127.0.0.1 at 2008-12-05 10:35:50) [GET]
+  Parameters: {"id"=>"1", "_dc"=>"1228487750626"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mPage Load (1.8ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."publish" = 't' AND "pages"."parent_id" IS NULL) ORDER BY lft ASC[0m
+  [4;36;1mPage Load (0.9ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."id" = 1) [0m
+Completed in 51ms (View: 5, DB: 4) | 200 OK [http://localhost/pages/edit/?_dc=1228487750626&id=1]

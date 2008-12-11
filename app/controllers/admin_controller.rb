@@ -13,10 +13,14 @@ class AdminController < ApplicationController
     pt.each_index do |i|
       if i == 0
         label = 'Tipo'
+        label_sep = ':'
+      else
+        label = ''
+        label_sep = ''
       end
       @page_type[i] = {:xtype => 'radio', :name => 'page[page_type_id]',
       :inputValue => pt[i][:id], :boxLabel => pt[i][:text],
-      :checked=>  false, :fieldLabel => label}
+      :checked=>  false, :fieldLabel => label, :labelSeparator => label_sep}
     end
     render :layout => false
   end
