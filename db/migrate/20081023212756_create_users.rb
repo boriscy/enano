@@ -15,6 +15,7 @@ class CreateUsers < ActiveRecord::Migration
     end
     add_index :users, :login, :unique => true
   end
+  User.create(:login => 'demo', :password => 'demo123', :email => 'demo@mail.com')
 
   def self.down
     drop_table "users"
