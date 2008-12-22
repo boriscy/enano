@@ -17,6 +17,11 @@
   <%= javascript_include_tag "../ext/plugins/Ext.ux.UploadDialog.js", "../ext/rails/railsBrowser.js"%>
 </head>
 <body>
+
+  <div id="loadingdiv" style="width: 150px; background: #FFF; border: 1px solid #99BBE8; padding: 4px; z-index: 100000;margin: 200px auto">
+    <img src="/images/ajax-loader.gif" alt="cargando" /> Cargando...
+  </div>
+
   <div id="category-tree" ></div>
 <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
 <script type="text/javascript">
@@ -43,6 +48,9 @@ Ext.onReady(function() {
     deletePageUrl : '/pages/destroy',
     jsonTree : <%= @pages.to_json %>
   });
+
+  Ext.get('loadingdiv').hide();
+  Ext.get('welcome-div').show();
 });
 tinyMCEModalWin = null;
 function myImageBrowser(fieldname, url, type, win) {
@@ -65,10 +73,9 @@ function enanoSelectFile(file) {
 </script>
 <div id="north">
 </div>
-<div id="welcome-div" style="padding: 10px">
+<div id="welcome-div" style="padding: 10px;display:none">
   Bienvenido a Enano un pequeño sistema de administración de Contenidos
-
- </div>
+</div>
 
 
 </body>

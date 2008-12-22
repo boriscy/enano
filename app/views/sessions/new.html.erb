@@ -5,10 +5,31 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Admin Enano</title>
   <%= stylesheet_link_tag "../ext/resources/css/ext-all.css", "extra.css", "Ext.ux.UploadDialog.css" %>
+<style>
+  body{
+    text-align: center;
+  }
+  #logindiv{
+    position: relative;
+    text-align: left;
+    margin:150px auto;
+    width: 220px;
+    height: 150px !important;
+    border: 1px solid #99BBE8;
+  }
+  div, form, p{
+    padding: 2px !important;
+    margin: 1px;
+  }
+  input, label{
+    font-size: 12px;
+  }
+  
+</style>
 </head>
 <body>
-<div style="width:300px;margin:auto">
-<h1>Log In</h1>
+<div id="logindiv" >
+<h1 class="x-panel-header">Log In</h1>
 
 <% form_tag session_path do -%>
 <p><%= label_tag 'login' %><br />
