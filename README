@@ -1,9 +1,15 @@
 Welcome to all to enano, enano is a small project with and interesting
 interface made with Ext JS, it has a cool filebrowser and it is integrated
 with tinyMCE
-Just download and run the project
+Just download and run the migrations and then run the project
+
+rake db:migrate # Runs migrations
+./script/server # Runs server
+
 to login go to http://localhost:3000/login.
-login: demo, password: demo123
+
+login: demo
+password: demo123
 
 in case that you run MySQL as your database create your database 
 modify the config/database.yml
@@ -15,12 +21,12 @@ development:
   username: login
   password: pass
 
-run the migrations start the server and run this SQL
-INSERT INTO `page_types` (`id`, `text`, `icon_cls`, `created_at`, `updated_at`) VALUES
-(1, 'Page', 'rails-page-white', '2008-09-19 20:43:01', '2008-10-02 21:04:38'),
-(2, 'Menu Link', 'rails-page-link', '2008-09-19 20:43:54', '2008-09-19 20:43:54');
-then go to http://localhost:3000/signup to create a User
-then go to http://localhost:3000/login
+run the migrations start the server
+login to http://localhost/login
+login=demo;password=demo123
+now you can check the admin area
+To add new users go to
+then go to http://localhost:3000/signup
 
 Post (english):
 http://extjs.com/forum/showthread.php?t=54461
@@ -52,16 +58,10 @@ development:
   username: login
   password: pass
 
-creen la la base de datos ejecuten las migraciones y corran el siguiente
-SQL:
-INSERT INTO `page_types` (`id`, `text`, `icon_cls`, `created_at`, `updated_at`) VALUES
-(1, 'Page', 'rails-page-white', '2008-09-19 20:43:01', '2008-10-02 21:04:38'),
-(2, 'Menu Link', 'rails-page-link', '2008-09-19 20:43:54', '2008-09-19 20:43:54');
-
-luego vayan a 
+creen la la base de datos ejecuten las migraciones
+Si desean crear nuevos usuarios lo pueden realizar en:
 http://localhost:3000/signup
-creen un usuario y despues vayan a
-http://localhost:3000/login
+
 
 
 Post (español):
