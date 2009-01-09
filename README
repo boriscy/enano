@@ -12,7 +12,7 @@ login: demo
 password: demo123
 
 in case that you run MySQL as your database create your database 
-modify the config/database.yml
+modify the config/database.yml and run the migrations (rake db:migrate)
 development:
   adapter: mysql
   encoding: utf8
