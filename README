@@ -58,7 +58,7 @@ development:
   username: login
   password: pass
 
-creen la la base de datos ejecuten las migraciones
+creen la la base de datos ejecuten las migraciones (rake db:migrate)
 Si desean crear nuevos usuarios lo pueden realizar en:
 http://localhost:3000/signup
 
