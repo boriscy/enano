@@ -11,6 +11,7 @@ class CreatePages < ActiveRecord::Migration
 
       t.timestamps
     end
+    # Creación de la página
     Page.create(:title => 'Inicio', :page_type_id => PageType.first.id, :publish => true,
       :body => '<h1>Inicio</h1><p><strong>enano</strong> es un proyecto de software libre creado con Ext JS y Ruby on Rails <img src="/images/rails.png"/><img src="/images/extjs2.png"/></p>')
   end
