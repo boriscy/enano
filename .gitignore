@@ -1,3 +1,6 @@
 *.log
 tmp/*
 db/development.sqlite3
+nbproject/*
+public/files/*
+public/thumbs/*
