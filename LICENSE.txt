@@ -1,7 +1,8 @@
-Enano
+enano
 @author  Ing. Boris Barroso
 @version $Id: enano 0.7 2008-12-04 
 @date    04. December 2008
+
 
 The code written in JavaScript for Ext JS applies the following licence
 
@@ -13,4 +14,5 @@ licensed development library or toolkit without explicit permission.
 License details: http://www.gnu.org/licenses/lgpl.html
 
 All Code written in Ruby has MIT licence 
+
 
