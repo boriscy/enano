@@ -1,6 +1,6 @@
 class CreateUsers < ActiveRecord::Migration
   def self.up
-    create_table "users", :force => true do |t|
+    create_table :users do |t|
       t.column :login,                     :string, :limit => 40
       t.column :name,                      :string, :limit => 100, :default => '', :null => true
       t.column :email,                     :string, :limit => 100
@@ -13,11 +13,11 @@ class CreateUsers < ActiveRecord::Migration
 
 
     end
+    User.create!(:login => 'admin', :password => 'demo123', :password_confirmation => 'demo123', :email => 'demo@mail.com')
     add_index :users, :login, :unique => true
   end
-  User.create(:login => 'demo', :password => 'demo123', :email => 'demo@mail.com')
 
   def self.down
-    drop_table "users"
+    drop_table :users
   end
 end

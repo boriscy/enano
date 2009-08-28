@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(:version => 20081027144642) do
     t.integer  "photo_file_size"
   end
 
-  add_index "enano_files", ["path"], :name => "index_enano_files_on_path", :unique => true
   add_index "enano_files", ["name"], :name => "index_enano_files_on_name"
+  add_index "enano_files", ["path"], :name => "index_enano_files_on_path", :unique => true
 
   create_table "page_types", :force => true do |t|
     t.string   "text",       :limit => 20
