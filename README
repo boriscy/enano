@@ -8,7 +8,7 @@ rake db:migrate # Runs migrations
 
 to login go to http://localhost:3000/login.
 
-login: demo
+login: admin
 password: demo123
 
 in case that you run MySQL as your database create your database 
