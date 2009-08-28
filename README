@@ -45,7 +45,7 @@ y si desean ver como funciona con el admin solo vayan a
 
 http://localhost:3000/login
 
-login: demo
+login: admin
 password: demo123
 
 
