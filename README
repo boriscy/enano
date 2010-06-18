@@ -22,11 +22,17 @@ development:
   password: pass
 
 run the migrations start the server
+
+RUN THE COMMANDS
+rake db:migrate
+rake db:seed
+
 login to http://localhost/login
 login=demo;password=demo123
 now you can check the admin area
 To add new users go to
 then go to http://localhost:3000/signup
+
 
 Post (english):
 http://extjs.com/forum/showthread.php?t=54461
@@ -62,6 +68,9 @@ creen la la base de datos ejecuten las migraciones (rake db:migrate)
 Si desean crear nuevos usuarios lo pueden realizar en:
 http://localhost:3000/signup
 
+CORRAN LOS COMANDOS
+rake db:migrate
+rake db:seed
 
 Post (español):
 http://softwarelibre.org.bo/borisb/weblog/3566.html
