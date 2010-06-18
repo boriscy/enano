@@ -6,3 +6,4 @@ public/files/*
 public/thumbs/*
 *.swp
 *.swo
+!.gitkeep

@@ -124,7 +124,7 @@ class FileBrowser
   # @return @boolean || hash self.file_details 
   def create_directory(path, name)
     res = {:id => "#{path}/#{name}"}
-    if (check_valid_file path) && name =~ /^[a-z0-9-_]+$/i
+    if (check_valid_file path) && (name =~ /^[a-z0-9-_]+$/i)
       begin
         mkdir "#{path}/#{name}"
         mkdir "#{path.gsub(/^#{@dirname}/, @thumbs)}/#{name}"
@@ -278,7 +278,7 @@ class FileBrowser
   # @param string image
   # @return string
   def get_thumbnail(image)
-    if File.exist? ( ( image.gsub /^#{@dirname}/, "#{@thumbs}" ) + @thumbext)
+    if File.exist?( ( image.gsub /^#{@dirname}/, "#{@thumbs}" ) + @thumbext)
       image = ( image.gsub /^#{@dirname}/, "#{@thumbslocal}" ) + @thumbext
     else
       image = '../images/bigicons/image.jpg'

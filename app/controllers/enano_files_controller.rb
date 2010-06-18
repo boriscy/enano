@@ -76,7 +76,6 @@ class EnanoFilesController < ApplicationController
 
   def check_method
     methods = ["make_directory", "move", "upload", "delete"]
-
     if request.get? && (methods.find {|v| v == params[:action]})
       logger.info("Possible attact from #{params.to_json}") #Must be implemened a method to log possible threads
       render :json => {:success => false}
