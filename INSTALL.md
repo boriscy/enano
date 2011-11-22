@@ -18,7 +18,7 @@ Then run
     rake db:migrate
     ./script/server
 
-To check how it works just got to (http://localhsot:3000/admin)[http://localhsot:3000/admin] and enter
+To check how it works just got to [http://localhsot:3000/admin]( http://localhsot:3000/admin ) and enter
 
     login: admin
     pass: demo123
